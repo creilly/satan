@@ -10,7 +10,7 @@ import os
 
 debug = False
 # number of monte carlo samples per quantum state probability calculation (qspc)
-N = 100
+N = 400
 
 # model parameter computation
 beam_diameter = 4.0e-3 # meters
@@ -72,15 +72,15 @@ data = [] # stores unchanging model data
 MEASURED, COMPUTED = 0, 1
 arrays = [] # stores job division information
 dataarrays = {} # stores computed and measured scientific data
-indexbuffer = np.empty(4,dtype=np.int32) # stores job division tranmission data
+indexbuffer = np.empty(4,dtype=np.int64) # stores job division tranmission data
 
 # synchronous buffer send (thin wrapper)
-def send(buffer,dest=masterrank):
+def send(buffer,dest):
     comm.Send(buffer,dest)
 # asynchronous buffer send 
 # sendrequests needed to prevent garbage collection of asychronous requests
-def isend(buffer):
-    sendrequests.append(comm.Isend(buffer,masterrank))
+def isend(buffer,dest):
+    sendrequests.append(comm.Isend(buffer,dest))
 # synchronous (blocking) recv
 def recv(buffer,source):
     comm.Recv(buffer,source)
@@ -154,9 +154,9 @@ def get_data():
                     # send curve segment metadata to masterrank
                     start = modemarker
                     stop = modemarker + tail
-                    isend(np.array((lineindex,mode,start,stop)))
+                    isend(np.array((lineindex,mode,start,stop),dtype=np.int64),masterrank)
                     # send curve segment measured data to masterrank
-                    isend(np.ascontiguousarray(zs))
+                    isend(np.ascontiguousarray(zs),masterrank)
                     if debug:
                         print(
                             '*','\t\t'.join(
@@ -176,7 +176,7 @@ def get_data():
                     # if current rank is core id
                     if rank == _rank:
                         # signal end of job division info transmission
-                        isend(np.array([END]*4))
+                        isend(np.array([END]*4),masterrank)
                     # reset chunk marker
                     rankmarker = 0
                     # increment rank marker
@@ -194,7 +194,7 @@ def get_data():
     # last rank will typically not have full chunk of qspcs
     # signal end of job division info transmission for this edge case
     # (that's why we make it the masterrank)
-    isend(np.array([END]*4))
+    isend(np.array([END]*4),masterrank)
 # organize masterrank data arrays
 # collect transmitted job division information
 def finish_get_data():
@@ -262,6 +262,7 @@ def finish_get_data():
 
 # model fudge factors (to be fitted)
 factors = np.array([1.2,0.25,0.8,0.3])
+factors[:] = [0.966, 0.400, 0.613, 0.400]
 
 # compute simulated curves for all curves
 def get_outdata():
@@ -340,7 +341,7 @@ def get_outdata():
         # shape : (n_points,)
         probs = np.einsum('ij,i->j',probs,modedegens) / (2*n_mu - 1)
         # send computed data to masterrank
-        isend(probs)    
+        isend(probs,masterrank)    
     if rank == masterrank:
         # collect computed data
         wait_recvs()
@@ -367,9 +368,11 @@ def optimize():
         res = noisyopt.minimizeSPSA(
             _optimize,            
             factors,
-            bounds = [(0.2,5.0)] * len(factors),
+            a = 0.01,
+            c = 0.01,
+            bounds = [(0.4,2.0)] * len(factors),
             paired=False,
-            niter = 5            
+            niter = 1000            
         )
         # res = differential_evolution(
         #     _optimize,
