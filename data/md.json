@@ -1,0 +1,377 @@
+[
+  {
+    "wavenumber": [
+      3028.75226,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      25.36,
+      "s-1"
+    ],
+    "j1": 0,
+    "j2": 1,
+    "grapher name": "0 1 0 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a00A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a01A2\u00a0\u00a03\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 26
+    }
+  },
+  {
+    "wavenumber": [
+      3009.011406,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      24.44,
+      "s-1"
+    ],
+    "j1": 1,
+    "j2": 0,
+    "grapher name": "0 -1 1 3.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a01F1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a00F2\u00a0\u00a03\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 31
+    }
+  },
+  {
+    "wavenumber": [
+      3018.824283,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      24.89,
+      "s-1"
+    ],
+    "j1": 1,
+    "j2": 1,
+    "grapher name": "0 0 1 3.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a01F1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a01F2\u00a0\u00a05\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 33
+    }
+  },
+  {
+    "wavenumber": [
+      3067.300026,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      27.09,
+      "s-1"
+    ],
+    "j1": 4,
+    "j2": 5,
+    "grapher name": "0 1 4 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a04A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a05A2\u00a0\u00a07\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 32
+    }
+  },
+  {
+    "wavenumber": [
+      3057.687423,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      26.74,
+      "s-1"
+    ],
+    "j1": 3,
+    "j2": 4,
+    "grapher name": "0 1 3 2.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a03A2\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a04A1\u00a0\u00a07\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 34
+    }
+  },
+  {
+    "wavenumber": [
+      3057.760735,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      26.67,
+      "s-1"
+    ],
+    "j1": 3,
+    "j2": 4,
+    "grapher name": "0 1 3 4.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a03F1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a04F2\u00a016\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 34
+    }
+  },
+  {
+    "wavenumber": [
+      3057.726496,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      26.67,
+      "s-1"
+    ],
+    "j1": 3,
+    "j2": 4,
+    "grapher name": "0 1 3 5.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a03F2\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a04F1\u00a015\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 35
+    }
+  },
+  {
+    "wavenumber": [
+      3038.498494,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      25.81,
+      "s-1"
+    ],
+    "j1": 1,
+    "j2": 2,
+    "grapher name": "0 1 1 3.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a01F1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a02F2\u00a010\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 35
+    }
+  },
+  {
+    "wavenumber": [
+      3086.03076,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      27.62,
+      "s-1"
+    ],
+    "j1": 6,
+    "j2": 7,
+    "grapher name": "0 1 6 2.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a06A2\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a07A1\u00a0\u00a08\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 31
+    }
+  },
+  {
+    "wavenumber": [
+      3085.832219,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      28.19,
+      "s-1"
+    ],
+    "j1": 6,
+    "j2": 7,
+    "grapher name": "0 1 6 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a06A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a07A2\u00a010\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 33
+    }
+  },
+  {
+    "wavenumber": [
+      3095.179237,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      28.5,
+      "s-1"
+    ],
+    "j1": 7,
+    "j2": 8,
+    "grapher name": "0 1 7 2.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a07A2\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a08A1\u00a011\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 32
+    }
+  },
+  {
+    "wavenumber": [
+      3122.331605,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      30.24,
+      "s-1"
+    ],
+    "j1": 10,
+    "j2": 11,
+    "grapher name": "0 1 10 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a010A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a011A2\u00a014\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 32
+    }
+  },
+  {
+    "wavenumber": [
+      3113.380273,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      29.31,
+      "s-1"
+    ],
+    "j1": 9,
+    "j2": 10,
+    "grapher name": "0 1 9 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a09A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a010A2\u00a012\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 33
+    }
+  },
+  {
+    "wavenumber": [
+      3113.261511,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      29.73,
+      "s-1"
+    ],
+    "j1": 9,
+    "j2": 10,
+    "grapher name": "0 1 9 2.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a09A2\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a010A1\u00a013\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 33
+    }
+  },
+  {
+    "wavenumber": [
+      3104.585504,
+      "cm-1"
+    ],
+    "einstein coefficient": [
+      28.4,
+      "s-1"
+    ],
+    "j1": 8,
+    "j2": 9,
+    "grapher name": "0 1 8 1.tsv",
+    "hitran line": [
+      "\u00a06",
+      "1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a00\u00a00\u00a01A1",
+      "\u00a0\u00a0\u00a0\u00a00\u00a00\u00a01\u00a00\u00a01F2",
+      "\u00a0\u00a0\u00a0\u00a08A1\u00a0\u00a01\u00a0\u00a0\u00a0\u00a0\u00a0",
+      "\u00a0\u00a0\u00a0\u00a09A2\u00a012\u00a0\u00a0\u00a0\u00a0\u00a0"
+    ],
+    "lengths": {
+      "0": 20,
+      "1": 33
+    }
+  }
+]
