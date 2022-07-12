@@ -5,12 +5,12 @@ from time import perf_counter
 from saturation import rabi, gamma, doppler, beam, bloch
 from matplotlib import pyplot as plt
 from scipy.optimize import differential_evolution
+import noisyopt
 import os
 
-debug = False
-
+debug = True
 # number of monte carlo samples per quantum state probability calculation (qspc)
-N = 1000
+N = 100
 
 # model parameter computation
 beam_diameter = 4.0e-3 # meters
@@ -114,6 +114,11 @@ def get_data():
         a = lined['einstein coefficient'][0] # s-1
         mubar = rabi.mubar(w,a) # prop. coeff. relating mu to cgc
         # compute mus, pulling cgcs from memory
+        if rank == masterrank:
+            print(
+                'j1',j1,'j1d',cgcd[j1]
+            )
+            print('j2',j2,'j2d',cgcd[j1][j2])
         mus = [
             cgcd[j1][j2][m] * mubar for m in range(n_mu)
         ]
@@ -364,13 +369,21 @@ def get_outdata():
 
 def optimize():
     if rank == masterrank:
-        res = differential_evolution(
+        res = noisyopt.minimizeSPSA(
             _optimize,
-            bounds=[(0.05,20.0)]*len(factors),
-            maxiter=100,
-            popsize=10,
-            disp=True
+            factors,
+            bounds = [(0.2,5.0)] * len(factors),
+            niter = 5,
+            disp = True,
+            callback = lambda x: print('cb result:',x)
         )
+        # res = differential_evolution(
+        #     _optimize,
+        #     bounds=[(0.05,20.0)]*len(factors),
+        #     maxiter=100,
+        #     popsize=10,
+        #     disp=True
+        # )
         print('results:',res)        
         stop_factors = -np.ones(len(factors))
         for _rank in range(size):
