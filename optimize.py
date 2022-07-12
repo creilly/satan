@@ -8,7 +8,7 @@ from scipy.optimize import differential_evolution
 import noisyopt
 import os
 
-debug = True
+debug = False
 # number of monte carlo samples per quantum state probability calculation (qspc)
 N = 100
 
@@ -108,17 +108,12 @@ def get_data():
     # loop through datasets, determine job load 
     for lineindex, lined in enumerate(md):        
         j1 = lined['j1']
-        n_mu = 2*j1 + 1 # qspcs per point on curve (fc or fs)
+        n_mu = j1 + 1 # qspcs per point on curve (fc or fs)
         j2 = lined['j2']
         w = lined['wavenumber'][0] # cm-1
         a = lined['einstein coefficient'][0] # s-1
         mubar = rabi.mubar(w,a) # prop. coeff. relating mu to cgc
         # compute mus, pulling cgcs from memory
-        if rank == masterrank:
-            print(
-                'j1',j1,'j1d',cgcd[j1]
-            )
-            print('j2',j2,'j2d',cgcd[j1][j2])
         mus = [
             cgcd[j1][j2][m] * mubar for m in range(n_mu)
         ]
@@ -266,7 +261,7 @@ def finish_get_data():
     clear_sends()
 
 # model fudge factors (to be fitted)
-factors = [1.2,0.25,0.8,0.3]
+factors = np.array([1.2,0.25,0.8,0.3])
 
 # compute simulated curves for all curves
 def get_outdata():
@@ -370,12 +365,11 @@ def get_outdata():
 def optimize():
     if rank == masterrank:
         res = noisyopt.minimizeSPSA(
-            _optimize,
+            _optimize,            
             factors,
             bounds = [(0.2,5.0)] * len(factors),
-            niter = 5,
-            disp = True,
-            callback = lambda x: print('cb result:',x)
+            paired=False,
+            niter = 5            
         )
         # res = differential_evolution(
         #     _optimize,
@@ -398,9 +392,9 @@ def optimize():
                 break        
             get_outdata()        
 
-def _optimize(_factors):    
-    start = perf_counter()    
-    factors[:] = _factors    
+def _optimize(_factors):        
+    start = perf_counter()   
+    factors[:] = _factors
     for _rank in range(size):
         if _rank == masterrank:
             continue
